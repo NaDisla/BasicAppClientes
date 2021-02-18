@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BasicAppClientes.Views.MainControlPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".7*"/>
+                <ColumnDefinition Width="3.5*" />
+                <ColumnDefinition Width=".7*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".1*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Mantenimiento de Clientes"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="4"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="1"/>
+            <Button Text="Listado de clientes"
+                    Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    x:Name="btnListado"
+                    Margin="10,0,10,10"
+                    Padding="0,10,0,10"
+                    Style="{StaticResource ControlesPrincipales}"
+                    ImageSource="listado.png"/>
+            <Button Text="Registrar clientes"
+                    x:Name="btnRegistro"
+                    Grid.Row="6"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="4"
+                    Margin="10,0,10,10"
+                    Padding="0,10,0,10"
+                    ImageSource="registro.png"
+                    Style="{StaticResource ControlesPrincipales}"/>
+            <Button Text="Actualizar clientes"
+                    x:Name="btnActualizar"
+                    Margin="10,10,10,0"
+                    Padding="0,10,0,10"
+                    ImageSource="update.png"
+                    Style="{StaticResource ControlesPrincipales}"
+                    Grid.Row="7"
+                    Grid.ColumnSpan="2" />
+            <Button Text="Eliminar clientes"
+                    x:Name="btnEliminar"
+                    Style="{StaticResource ControlesPrincipales}"
+                    Margin="10,10,10,0"
+                    Padding="0,10,0,10"
+                    ImageSource="eliminar.png"
+                    Grid.Row="7"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="4" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
