@@ -4,9 +4,50 @@
              x:Class="BasicAppClientes.Views.EliminarClientesPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Borrado de Clientes"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   Margin="20"
+                   FontSize="Title" />
+            <Entry Placeholder="Código"
+                   Keyboard="Numeric"
+                   Margin="20"
+                   x:Name="txtIDCliente" />
+            <Button Margin="10"
+                    Text="Consultar"
+                    HorizontalOptions="Center"
+                    BackgroundColor="DarkCyan"
+                    TextColor="White"
+                    CornerRadius="30"
+                    Padding="20,0,20,0"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    x:Name="btnConsultaCliente"
+                    Clicked="btnConsultaCliente_Clicked" />
+            <StackLayout IsVisible="False" x:Name="layoutDelete">
+                <Entry Placeholder="Nombre"
+                       Margin="20"
+                       x:Name="txtNombreCliente"
+                       IsReadOnly="True"/>
+                <Entry Placeholder="Teléfono"
+                       Margin="20"
+                       x:Name="txtTelefonoCliente"
+                       IsReadOnly="True"/>
+                <Entry Placeholder="Correo"
+                       Margin="20"
+                       IsReadOnly="True"
+                       x:Name="txtCorreoCliente"/>
+                <Button Text="Eliminar cliente"
+                        x:Name="btnDeleteCliente"
+                        HorizontalOptions="Center"
+                        BackgroundColor="DarkCyan"
+                        CornerRadius="30"
+                        FontAttributes="Bold"
+                        FontSize="15"
+                        TextColor="White"
+                        Padding="20,0,20,0"
+                        Clicked="btnDeleteCliente_Clicked" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

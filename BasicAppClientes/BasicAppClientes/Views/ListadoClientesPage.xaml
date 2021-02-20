@@ -12,14 +12,13 @@
                    Margin="20" />
             <ListView BackgroundColor="AliceBlue"
                       Margin="20"
-                      RowHeight="100"
+                      RowHeight="120"
                       SeparatorColor="DarkCyan"
                       x:Name="listaFrontPersonas">
-                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="20">
+                            <StackLayout Padding="20,10,0,20">
                                 <Label Text="{Binding ClienteID,StringFormat='Código: {0}'}"
                                        FontAttributes="Bold"/>
                                 <Label Text="{Binding ClienteNombre,StringFormat='Nombre: {0}'}"/>

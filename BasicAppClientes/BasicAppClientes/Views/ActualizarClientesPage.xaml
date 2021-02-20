@@ -22,8 +22,9 @@
                     Padding="20,0,20,0"
                     FontSize="15"
                     FontAttributes="Bold"
-                    x:Name="btnConsultaCliente"/>
-            <StackLayout  IsVisible="False">
+                    x:Name="btnConsultaCliente"
+                    Clicked="btnConsultaCliente_Clicked"/>
+            <StackLayout IsVisible="False" x:Name="layoutUpdate">
                 <Entry Placeholder="Nombre"
                        Margin="20"
                        x:Name="txtNombreCliente" />
@@ -35,6 +36,16 @@
                        Keyboard="Email"
                        Margin="20"
                        x:Name="txtCorreoCliente" />
+                <Button Text="Actualizar datos"
+                        x:Name="btnUpdateCliente"
+                        HorizontalOptions="Center"
+                        BackgroundColor="DarkCyan"
+                        CornerRadius="30"
+                        FontAttributes="Bold"
+                        FontSize="15"
+                        TextColor="White"
+                        Padding="20,0,20,0"
+                        Clicked="btnUpdateCliente_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
