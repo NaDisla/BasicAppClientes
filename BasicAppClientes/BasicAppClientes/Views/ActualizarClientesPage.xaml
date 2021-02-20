@@ -4,9 +4,38 @@
              x:Class="BasicAppClientes.Views.ActualizarClientesPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Actualización de Clientes"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   Margin="20"
+                   FontSize="Title"/>
+            <Entry Placeholder="Código"
+                   Keyboard="Numeric"
+                   Margin="20"
+                   x:Name="txtIDCliente"/>
+            <Button Margin="10"
+                    Text="Consultar"
+                    HorizontalOptions="Center"
+                    BackgroundColor="DarkCyan"
+                    TextColor="White"
+                    CornerRadius="30"
+                    Padding="20,0,20,0"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    x:Name="btnConsultaCliente"/>
+            <StackLayout  IsVisible="False">
+                <Entry Placeholder="Nombre"
+                       Margin="20"
+                       x:Name="txtNombreCliente" />
+                <Entry Placeholder="Teléfono"
+                       Keyboard="Telephone"
+                       Margin="20"
+                       x:Name="txtTelefonoCliente" />
+                <Entry Placeholder="Correo"
+                       Keyboard="Email"
+                       Margin="20"
+                       x:Name="txtCorreoCliente" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

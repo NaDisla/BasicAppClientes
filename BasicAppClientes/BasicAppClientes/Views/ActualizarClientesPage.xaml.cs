@@ -16,5 +16,10 @@ namespace BasicAppClientes.Views
         {
             InitializeComponent();
         }
+
+        private void btnConsultaCliente_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
