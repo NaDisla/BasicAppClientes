@@ -16,5 +16,25 @@ namespace BasicAppClientes.Views
         {
             InitializeComponent();
         }
+
+        private async void btnListado_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ListadoClientesPage());
+        }
+
+        private async void btnRegistro_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegistroClientesPage());
+        }
+
+        private void btnActualizar_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,6 +10,7 @@
             <Setter Property="BorderColor" Value="DarkCyan"/>
             <Setter Property="TextColor" Value="#186266" />
             <Setter Property="ContentLayout" Value="Top,0"/>
+            <Setter Property="Padding" Value="0,10,0,10"/>
         </Style>
     </Application.Resources>
 </Application>

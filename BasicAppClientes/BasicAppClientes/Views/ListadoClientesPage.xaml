@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BasicAppClientes.Views.ListadoClientesPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Listado de clientes"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="Title"
+                   Margin="20" />
+            <ListView BackgroundColor="AliceBlue"
+                      Margin="20"
+                      RowHeight="100"
+                      SeparatorColor="DarkCyan"
+                      x:Name="listaFrontPersonas">
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="20">
+                                <Label Text="{Binding ClienteID,StringFormat='Código: {0}'}"
+                                       FontAttributes="Bold"/>
+                                <Label Text="{Binding ClienteNombre,StringFormat='Nombre: {0}'}"/>
+                                <Label Text="{Binding ClienteTelefono,StringFormat='Teléfono: {0}'}"/>
+                                <Label Text="{Binding ClienteCorreo,StringFormat='Correo electrónico: {0}'}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

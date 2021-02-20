@@ -35,36 +35,35 @@
                     Grid.ColumnSpan="2"
                     x:Name="btnListado"
                     Margin="10,0,10,10"
-                    Padding="0,10,0,10"
                     Style="{StaticResource ControlesPrincipales}"
-                    ImageSource="listado.png"/>
+                    ImageSource="listado.png"
+                    Clicked="btnListado_Clicked"/>
             <Button Text="Registrar clientes"
                     x:Name="btnRegistro"
                     Grid.Row="6"
                     Grid.Column="2"
                     Grid.ColumnSpan="4"
                     Margin="10,0,10,10"
-                    Padding="0,10,0,10"
                     ImageSource="registro.png"
-                    Style="{StaticResource ControlesPrincipales}"/>
+                    Style="{StaticResource ControlesPrincipales}"
+                    Clicked="btnRegistro_Clicked"/>
             <Button Text="Actualizar clientes"
                     x:Name="btnActualizar"
                     Margin="10,10,10,0"
-                    Padding="0,10,0,10"
                     ImageSource="update.png"
                     Style="{StaticResource ControlesPrincipales}"
                     Grid.Row="7"
-                    Grid.ColumnSpan="2" />
+                    Grid.ColumnSpan="2"
+                    Clicked="btnActualizar_Clicked"/>
             <Button Text="Eliminar clientes"
                     x:Name="btnEliminar"
                     Style="{StaticResource ControlesPrincipales}"
                     Margin="10,10,10,0"
-                    Padding="0,10,0,10"
                     ImageSource="eliminar.png"
                     Grid.Row="7"
                     Grid.Column="2"
-                    Grid.ColumnSpan="4" />
-
+                    Grid.ColumnSpan="4"
+                    Clicked="btnEliminar_Clicked" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BasicAppClientes.Views.RegistroClientesPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".5*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width=".5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".1*"/>
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Registro de Clientes"
+                   Grid.ColumnSpan="4"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="Title"
+                   Grid.Row="1" />
+            <Entry Placeholder="Nombre"
+                   Grid.Row="3"
+                   Grid.ColumnSpan="4"
+                   Margin="10,0,10,0"
+                   x:Name="txtNombre"/>
+            <Entry Placeholder="Teléfono"
+                   Keyboard="Telephone"
+                   Grid.Row="4"
+                   Grid.ColumnSpan="4"
+                   Margin="10,0,10,0"
+                   x:Name="txtTelefono" />
+            <Entry Placeholder="Correo"
+                   Keyboard="Email"
+                   Grid.Row="5"
+                   Grid.ColumnSpan="4"
+                   Margin="10,0,10,0"
+                   x:Name="txtCorreo" />
+            <Button Text="Registrar"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    x:Name="btnRegistrarCliente"
+                    Clicked="btnRegistrarCliente_Clicked"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
