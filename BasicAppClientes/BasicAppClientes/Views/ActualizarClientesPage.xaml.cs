@@ -45,7 +45,7 @@ namespace BasicAppClientes.Views
                 await Task.Delay(2000);
                 await client.PutAsync($"{urlApi}{int.Parse(txtIDCliente.Text)}", content);
                 await PopupNavigation.RemovePageAsync(loading);
-                await DisplayAlert("Datos actualizados", "Se han actualizado los datos correctamente..", "OK");
+                await DisplayAlert("Datos actualizados", "Se han actualizado los datos correctamente.", "OK");
             }
             catch (Exception)
             {
@@ -72,6 +72,10 @@ namespace BasicAppClientes.Views
                     txtNombreCliente.Text = cliente.ClienteNombre;
                     txtTelefonoCliente.Text = cliente.ClienteTelefono;
                     txtCorreoCliente.Text = cliente.ClienteCorreo;
+                }
+                else
+                {
+                    await DisplayAlert("Error", $"No se ha encontrado un cliente con el código {int.Parse(txtIDCliente.Text)}.", "OK");
                 }
             }
             catch (Exception)

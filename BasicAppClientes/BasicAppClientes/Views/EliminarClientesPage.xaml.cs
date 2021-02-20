@@ -44,6 +44,10 @@ namespace BasicAppClientes.Views
                     txtTelefonoCliente.Text = cliente.ClienteTelefono;
                     txtCorreoCliente.Text = cliente.ClienteCorreo;
                 }
+                else
+                {
+                    await DisplayAlert("Error", $"No se ha encontrado un cliente con el código {int.Parse(txtIDCliente.Text)}.", "OK");
+                }
             }
             catch (Exception)
             {

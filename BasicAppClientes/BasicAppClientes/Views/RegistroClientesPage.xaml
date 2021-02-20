@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BasicAppClientes.Views.RegistroClientesPage">
+             x:Class="BasicAppClientes.Views.RegistroClientesPage"
+             xmlns:behavior="clr-namespace:BasicAppClientes.Models">
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -37,7 +38,11 @@
                    Grid.Row="4"
                    Grid.ColumnSpan="4"
                    Margin="10,0,10,0"
-                   x:Name="txtTelefono" />
+                   x:Name="txtTelefono">
+                <Entry.Behaviors>
+                    <behavior:MaskedBehavior Mask="XXX-XXX-XXXX"/>
+                </Entry.Behaviors>
+            </Entry>
             <Entry Placeholder="Correo"
                    Keyboard="Email"
                    Grid.Row="5"
@@ -49,8 +54,7 @@
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
                     x:Name="btnRegistrarCliente"
-                    Clicked="btnRegistrarCliente_Clicked"/>
-
+                    Clicked="btnRegistrarCliente_Clicked" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
